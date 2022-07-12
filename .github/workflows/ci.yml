@@ -52,7 +52,7 @@ jobs:
         run: pnpm audit
       - name: Check directory
         run: |
-          # echo $(pnpm store path)
+          pnpm store path --silent
           ls /home/runner/.local/share/pnpm/store/v3
           ls $(pnpm store path)
   # this is the test matrix, it runs with node16 on linux,windows,macos + node14,18 on linux
